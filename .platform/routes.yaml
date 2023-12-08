@@ -8,6 +8,8 @@
   upstream: "app:http"
   cache:
     enabled: false
+    # Base the cache on the session cookie. Ignore all other cookies.
+    cookies: ['/^SS?ESS/']
 
 "https://www.{default}/":
   type: redirect
