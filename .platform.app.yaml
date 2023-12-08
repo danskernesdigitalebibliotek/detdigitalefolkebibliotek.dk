@@ -112,6 +112,7 @@ hooks:
   # We run deploy hook after your application has been deployed and started.
   deploy: |
     set -e
+    cd public
     drush -y updatedb
     drush cc all
 
