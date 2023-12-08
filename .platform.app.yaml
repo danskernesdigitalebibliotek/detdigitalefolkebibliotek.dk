@@ -112,12 +112,8 @@ hooks:
   # We run deploy hook after your application has been deployed and started.
   deploy: |
     set -e
-#    drush -y updatedb
-#    drush -y features-revert-all
-#    drush secure-permissions-rebuild
-#    drush css-generate
-#    drush pm-enable ding_config_import
-#    drush cc all
+    drush -y updatedb
+    drush cc all
 
   # The configuration of scheduled execution.
 crons:
